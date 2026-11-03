@@ -238,3 +238,36 @@ body{background:var(--paper);color:var(--ink);font-size:16px;line-height:1.65}
  .brands ul{grid-template-columns:repeat(2,minmax(0,1fr))}
  .brands li.brand-logo-tile:nth-child(n){grid-column:auto}
 }
+
+/* Grilla de marcas en tres filas de cuatro */
+.brands ul{width:min(100%,1050px);grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.brands li.brand-logo-tile:nth-child(n){grid-column:auto}
+.brands li.brand-logo-empty{border-color:transparent;background:transparent;box-shadow:none}
+@media(max-width:650px){
+ .brands ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .brands li.brand-logo-empty{display:none}
+}
+
+/* Contacto e Instagram comparten el ancho en dos columnas */
+.ordering-inner{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);align-items:center;column-gap:clamp(36px,5vw,76px)}
+.ordering-copy{grid-column:1;min-width:0}
+.ordering-copy h2{max-width:680px}
+.ordering-copy>p:not(.section-kicker){max-width:610px}
+.ordering-copy .store-details{max-width:none}
+.ordering-copy>small{max-width:600px}
+.ordering-inner>.instagram-card{grid-column:2;grid-row:1;align-self:center;width:100%;max-width:none;margin:0;padding:30px 26px;grid-template-columns:1fr;gap:20px}
+.ordering-inner>.instagram-card h3{font-size:clamp(23px,2.4vw,34px)}
+.ordering-inner>.instagram-card-copy>p:last-child{font-size:15px}
+.ordering-inner>.instagram-card-link{justify-self:start}
+@media(max-width:900px){
+ .ordering-inner{grid-template-columns:minmax(0,1fr);row-gap:30px}
+ .ordering-copy,.ordering-inner>.instagram-card{grid-column:1;grid-row:auto}
+ .ordering-inner>.instagram-card{max-width:680px}
+}
+@media(max-width:650px){
+ .ordering-inner{row-gap:25px}
+ .ordering-inner>.instagram-card{padding:19px;gap:15px}
+ .ordering-inner>.instagram-card h3{font-size:24px}
+}
+
+.ordering-inner>.instagram-card .instagram-card-link{justify-self:start}

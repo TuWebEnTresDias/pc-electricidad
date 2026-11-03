@@ -129,3 +129,13 @@ body{background:var(--paper);color:var(--ink);font-size:16px;line-height:1.65}
 .instagram-card-link:hover{transform:translateY(-2px);background:#171b18}
 @media(max-width:650px){.instagram-card{margin-top:22px;padding:18px;grid-template-columns:1fr;gap:15px}.instagram-card h3{font-size:23px}.instagram-card-link{justify-self:start;min-height:46px;padding:11px 13px;font-size:12px}}
 @media(prefers-reduced-motion:reduce){.instagram-card-link{transition:none}}
+
+
+/* Ajustes solicitados: tarjetas más amplias, título FAQ legible y footer centrado */
+#productos.section-wrap{width:min(100%,1520px)}
+@media(min-width:901px){.faq{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}.faq h2{font-size:clamp(40px,4.4vw,60px)}}
+.footer-inner{grid-template-columns:1fr;justify-items:center;gap:18px;text-align:center}
+.footer-brand{justify-content:center}
+.footer-inner>p,.footer-inner>a:nth-of-type(2){grid-column:auto;grid-row:auto;justify-self:center}
+.footer-inner>.footer-bottom{grid-column:auto;width:100%;text-align:center}
+@media(max-width:650px){#productos.section-wrap{width:100%}}

@@ -199,3 +199,25 @@ body{background:var(--paper);color:var(--ink);font-size:16px;line-height:1.65}
 .section-wrap,.ordering-inner{width:100%;max-width:calc(var(--max) + var(--gutter) + var(--gutter));margin-inline:auto}
 #productos.section-wrap{width:100%;max-width:calc(var(--max) + var(--gutter) + var(--gutter))}
 .protection{width:100%;max-width:none;margin-inline:0}
+
+
+/* Marcas: grilla centrada en tres niveles */
+.brands{min-height:540px;grid-template-columns:1fr;justify-items:center;align-content:center;gap:38px;text-align:center}
+.brands-heading{max-width:720px}
+.brands ul{width:min(100%,900px);display:grid;grid-template-columns:repeat(6,minmax(0,1fr));justify-content:center;gap:14px}
+.brands li.brand-logo-tile{min-height:88px;padding:12px;display:grid;place-items:center;border:1px solid #e1dbcf;border-radius:8px;background:#fff;box-shadow:0 7px 20px #29251c0a;color:#292c28;font-size:clamp(12px,1.05vw,16px);font-weight:900;letter-spacing:.075em}
+.brands li.brand-logo-tile:nth-child(n+7){grid-column:span 2}
+.brands li.brand-logo-tile:nth-child(7){grid-column:2/span 2}
+.brands li.brand-logo-tile:nth-child(8){grid-column:4/span 2}
+.brands li.brand-logo-tile:nth-child(9){grid-column:6/span 1}
+.faq{grid-template-columns:1fr;justify-items:center;gap:36px}
+.faq-heading{text-align:center}
+.faq-list{width:min(100%,900px)}
+@media(max-width:650px){
+ .brands{min-height:0;padding-block:72px;gap:28px}
+ .brands ul{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .brands li.brand-logo-tile{min-height:72px;font-size:12px}
+ .brands li.brand-logo-tile:nth-child(n){grid-column:auto}
+ .faq{gap:25px}
+ .faq-heading h2{max-width:15ch;margin-inline:auto}
+}

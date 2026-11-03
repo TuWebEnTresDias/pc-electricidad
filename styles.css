@@ -113,3 +113,7 @@ body{background:var(--paper);color:var(--ink);font-size:16px;line-height:1.65}
 
 /* El contenido del pie ocupa el ancho completo del contenedor */
 .footer{display:block}.footer-inner{width:min(100%,var(--max));margin-inline:auto}
+
+
+/* Dar más espacio al mensaje central de la sección de presentación */
+.intro{grid-template-columns:minmax(145px,.45fr) minmax(0,1.65fr) minmax(140px,.4fr)}.intro>div{min-width:0}.intro h2{max-width:720px}

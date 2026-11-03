@@ -139,3 +139,23 @@ body{background:var(--paper);color:var(--ink);font-size:16px;line-height:1.65}
 .footer-inner>p,.footer-inner>a:nth-of-type(2){grid-column:auto;grid-row:auto;justify-self:center}
 .footer-inner>.footer-bottom{grid-column:auto;width:100%;text-align:center}
 @media(max-width:650px){#productos.section-wrap{width:100%}}
+
+
+/* Mobile: apilar correctamente el hero y la presentación */
+@media(max-width:650px){
+  .hero{grid-template-columns:minmax(0,1fr);align-items:stretch;gap:24px;padding:48px var(--gutter) 62px}
+  .hero-copy{width:100%;max-width:none;min-width:0}
+  .hero .eyebrow{max-width:none;font-size:11px;letter-spacing:.14em}
+  .hero h1{max-width:100%;margin:20px 0;font-size:clamp(48px,12vw,62px);line-height:.98;overflow-wrap:normal}
+  .hero h1 br{display:none}
+  .hero-lead{max-width:36ch;font-size:17px;line-height:1.6}
+  .hero-actions{margin-top:24px}
+  .hero-art{width:100%;max-width:none;justify-self:stretch;padding:8px 0 0}
+  .art-frame{width:100%;height:clamp(250px,72vw,360px)}
+  .art-stamp{top:0;left:0;width:62px;height:62px}
+  .intro{grid-template-columns:minmax(0,1fr);align-items:start;gap:14px;padding-block:52px}
+  .intro>*{min-width:0}
+  .intro h2{max-width:15ch;font-size:clamp(36px,9.5vw,48px);line-height:1.03}
+  .intro p:last-child{max-width:60ch;font-size:16px;line-height:1.65}
+  .intro-logo{width:min(100%,140px);margin-top:4px;justify-self:start;align-self:start}
+}

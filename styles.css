@@ -193,3 +193,9 @@ body{background:var(--paper);color:var(--ink);font-size:16px;line-height:1.65}
   .instagram-card-link{font-size:13px}
   .footer-bottom{font-size:12px}
 }
+
+
+/* Ancho común para el contenido; los fondos siguen ocupando todo el viewport */
+.section-wrap,.ordering-inner{width:100%;max-width:calc(var(--max) + var(--gutter) + var(--gutter));margin-inline:auto}
+#productos.section-wrap{width:100%;max-width:calc(var(--max) + var(--gutter) + var(--gutter))}
+.protection{width:100%;max-width:none;margin-inline:0}
